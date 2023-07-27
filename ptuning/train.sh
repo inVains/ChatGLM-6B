@@ -1,7 +1,7 @@
 PRE_SEQ_LEN=4096
 LR=2e-2
 
-CUDA_VISIBLE_DEVICES=0 python3 main.py \
+CUDA_VISIBLE_DEVICES=0,1 python3 main.py \
     --do_train \
     --train_file dichandata_demo/train.json \
     --validation_file dichandata_demo/dev.json \
