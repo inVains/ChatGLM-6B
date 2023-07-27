@@ -8,8 +8,8 @@ CUDA_VISIBLE_DEVICES=0 python3 main.py \
     --prompt_column content \
     --response_column summary \
     --overwrite_cache \
-    --model_name_or_path THUDM/chatglm-6b \
-    --output_dir output/demo-chatglm-6b-pt-$PRE_SEQ_LEN-$LR \
+    --model_name_or_path THUDM/chatglm-6b-int4 \
+    --output_dir output/demo-chatglm-6b-int4-pt-$PRE_SEQ_LEN-$LR \
     --overwrite_output_dir \
     --max_source_length 2048 \
     --max_target_length 2048 \
@@ -17,9 +17,9 @@ CUDA_VISIBLE_DEVICES=0 python3 main.py \
     --per_device_eval_batch_size 1 \
     --gradient_accumulation_steps 16 \
     --predict_with_generate \
-    --max_steps 3000 \
-    --logging_steps 10 \
-    --save_steps 1000 \
+    --max_steps 100 \
+    --logging_steps 5 \
+    --save_steps 10 \
     --learning_rate $LR \
     --pre_seq_len $PRE_SEQ_LEN \
     --quantization_bit 4
