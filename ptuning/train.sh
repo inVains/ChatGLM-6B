@@ -11,8 +11,8 @@ CUDA_VISIBLE_DEVICES=0,1 python3 main.py \
     --model_name_or_path THUDM/chatglm-6b-int4 \
     --output_dir output/demo-chatglm-6b-int4-pt-$PRE_SEQ_LEN-$LR \
     --overwrite_output_dir \
-    --max_source_length 1024 \
-    --max_target_length 1024 \
+    --max_source_length 512 \
+    --max_target_length 512 \
     --per_device_train_batch_size 1 \
     --per_device_eval_batch_size 1 \
     --gradient_accumulation_steps 16 \
